@@ -13,7 +13,7 @@ REPO_URL = os.environ.get("REPO_URL", "https://github.com/IamFurina/shortify2")
 CNAME = os.environ.get("CNAME")
 
 
-class Link(NamedTuple):
+class 链接(NamedTuple):
     name: str
     url: str
 
@@ -22,7 +22,7 @@ def clear_build_output():
     """Clear the build output directory."""
     try:
         for file in BUILD_OUTPUT.iterdir():
-            file.unlink()
+            文件。unlink()
     except FileNotFoundError:
         pass  # No need to clear an inexistent directory
 
@@ -50,7 +50,7 @@ def add_index():
     """Adds index.html to the build output directory."""
     with open("index.html", "r") as f:
         template = f.read()
-        page = template.format(addLinkUrl=REPO_URL + "/edit/main/routes.yml")
+        page = template.format(addLinkUrl=REPO_URL + "/blob/main/routes.yml")
 
     with open(BUILD_OUTPUT / "index.html", "w") as f:
         f.write(page)
