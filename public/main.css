@@ -85,4 +85,13 @@ a.button:hover {
   button {
     width: auto;
   }
+ * {
+    font-family: LXGW WenKai;
+  }
+  * {
+    font-weight: bold;
+  }
+  body {
+    font-family: LXGW WenKai;
+  }
 }
