@@ -21,7 +21,7 @@ class link(NamedTuple):
 def clear_build_output():
     """Clear the build output directory."""
     try:
-        f或 dotf in BUILD_OUTPUT.iterdir():
+        for dotf in BUILD_OUTPUT.iterdir():
             dotf.unlink()
     except FileNotFoundError:
         pass  # No need to clear an inexistent directory
