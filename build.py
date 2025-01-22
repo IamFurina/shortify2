@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 ROUTE_CONFIG_PATH = Path("routes.yml")
 BUILD_OUTPUT = Path(os.environ.get("BUILD_OUTPUT", "dist"))
-REPO_URL = os.environ.get("REPO_URL", "https://github.com/gustavwilliam/shortify2")
+REPO_URL = os.environ.get("REPO_URL", "https://github.com/IamFurina/shortify2")
 CNAME = os.environ.get("CNAME")
 
 
