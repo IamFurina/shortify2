@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 from typing import NamedTuple
 import shutil
@@ -9,11 +8,11 @@ from dotenv import load_dotenv
 load_dotenv()
 ROUTE_CONFIG_PATH = Path("routes.yml")
 BUILD_OUTPUT = Path(os.environ.get("BUILD_OUTPUT", "dist"))
-REPO_URL = os.environ.get("REPO_URL", "https://github.com/IamFurina/shortify2")
+REPO_URL = os.environ.get("REPO_URL", "https://github.com/gustavwilliam/shortify2")
 CNAME = os.environ.get("CNAME")
 
 
-class link(NamedTuple):
+class Link(NamedTuple):
     name: str
     url: str
 
@@ -21,8 +20,8 @@ class link(NamedTuple):
 def clear_build_output():
     """Clear the build output directory."""
     try:
-        for dotf in BUILD_OUTPUT.iterdir():
-            dotf.unlink()
+        for file in BUILD_OUTPUT.iterdir():
+            file.unlink()
     except FileNotFoundError:
         pass  # No need to clear an inexistent directory
 
