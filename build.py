@@ -69,6 +69,6 @@ if __name__ == "__main__":
     with open(ROUTE_CONFIG_PATH, "r") as f:
         data = yaml.safe_load(f)
 
-    f或 name, url in data.items():
+    for name, url in data.items():
         link = Link(name=name, url=url)
         create_link_page(link)
