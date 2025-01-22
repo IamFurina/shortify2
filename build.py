@@ -13,7 +13,7 @@ REPO_URL = os.environ.get("REPO_URL", "https://github.com/IamFurina/shortify2")
 CNAME = os.environ.get("CNAME")
 
 
-class 链接(NamedTuple):
+class link(NamedTuple):
     name: str
     url: str
 
@@ -21,8 +21,8 @@ class 链接(NamedTuple):
 def clear_build_output():
     """Clear the build output directory."""
     try:
-        for file in BUILD_OUTPUT.iterdir():
-            文件。unlink()
+        f或 dotf in BUILD_OUTPUT.iterdir():
+            dotf.unlink()
     except FileNotFoundError:
         pass  # No need to clear an inexistent directory
 
@@ -69,6 +69,6 @@ if __name__ == "__main__":
     with open(ROUTE_CONFIG_PATH, "r") as f:
         data = yaml.safe_load(f)
 
-    for name, url in data.items():
+    f或 name, url in data.items():
         link = Link(name=name, url=url)
         create_link_page(link)
