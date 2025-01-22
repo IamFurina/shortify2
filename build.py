@@ -13,7 +13,7 @@ REPO_URL = os.environ.get("REPO_URL", "https://github.com/gustavwilliam/shortify
 CNAME = os.environ.get("CNAME")
 
 
-class 链接(NamedTuple):
+class Link(NamedTuple):
     name: str
     url: str
 
@@ -22,7 +22,7 @@ def clear_build_output():
     """Clear the build output directory."""
     try:
         for file in BUILD_OUTPUT.iterdir():
-            文件。unlink()
+            file.unlink()
     except FileNotFoundError:
         pass  # No need to clear an inexistent directory
 
